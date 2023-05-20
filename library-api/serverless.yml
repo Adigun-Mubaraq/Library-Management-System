@@ -38,33 +38,38 @@ functions:
   create:
     handler: handler.create
     events:
-      - httpApi:
+      - http:
           path: /books
           method: post
+          cors: true
   readAll:
     handler: handler.readAll
     events:
-      - httpApi:
+      - http:
           path: /books
           method: get
+          cors: true
   readOne:
     handler: handler.readOne
     events:
-      - httpApi:
+      - http:
           path: /books/{id}
           method: get
+          cors: true
   update:
     handler: handler.update
     events:
-      - httpApi:
+      - http:
           path: /books/{id}
           method: put
+          cors: true
   delete: 
     handler: handler.delete
     events: 
-      - httpApi:
+      - http:
           path: /books/{id}
           method: delete
+          cors: true
 
 resources:
   Resources:

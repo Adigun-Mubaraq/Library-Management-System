@@ -10,6 +10,10 @@ module.exports.create = (event, context, callback) => {
   createBook(event, (error, result) => {
     const response = {
       statusCode: 201,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: JSON.stringify({
         msg: "book added successfully",
         result,
@@ -24,6 +28,10 @@ module.exports.readAll = (event, context, callback) => {
   readAllBooks(event, (error, result) => {
     const response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: JSON.stringify({
         msg: "list of all books",
         result,
@@ -38,6 +46,10 @@ module.exports.readOne = (event, context, callback) => {
   readOneBook(event, (error, result) => {
     const response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: JSON.stringify({
         msg: "book succesfully fetched",
         result,
@@ -52,6 +64,10 @@ module.exports.update = (event, context, callback) => {
   updateBook(event, (error, result) => {
     const response = {
       statusCode: 201,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: JSON.stringify({
         msg: "book updated successfully",
         result,
@@ -68,6 +84,10 @@ module.exports.delete = (event, context, callback) => {
   deleteBook(event, (error, result) => {
     const response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: JSON.stringify({
         msg: "book deleted successfully",
         result,
